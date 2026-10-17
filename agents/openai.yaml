@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tiny Ship & Search"
+  short_description: "Publish a personal site and verify search setup"
+  default_prompt: "Use $publish-cloudflare-search-console to publish my personal website to Cloudflare Pages and report verified production and Google Search Console results."
