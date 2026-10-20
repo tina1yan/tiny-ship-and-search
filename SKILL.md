@@ -14,6 +14,14 @@ A deliberately small skill: ship a personal website, inspect the real result, an
 - Use the existing free plan where suitable; check [current limits](https://developers.cloudflare.com/pages/platform/limits/). Do not enable billing, buy a domain, or add unrelated services without authorization. A custom domain is optional.
 - Prepare and inspect the public build. Publish only the personal project and its required public assets. Exclude private files and credentials. Follow existing authorization for publishing; a read-only check does not authorize deployment.
 
+## Mandatory public identity & map-provider checks
+
+- **Neutral public identity by default:** before any deployment or user-facing link, check the *full URL* (including parent provider account subdomain), redirects, canonical, sitemap, Open Graph, page footer and attribution. Do not reveal a person's real name, email, personal account slug or other personal identifier unless the owner explicitly requests public attribution.
+- Prefer a descriptive neutral **Cloudflare Pages `project.pages.dev`** address for public hobby projects. A seemingly anonymous Worker script name does not protect the parent `account.workers.dev` hostname. Never modify an account-wide Worker subdomain to fix an individual site's identity.
+- When migrating away from a revealing URL, confirm the replacement's HTML, APIs, critical UI, SEO files and expected functionality before disabling the old public hostname. Note that disabling an address does not erase copies previously shared or indexed elsewhere.
+- For maps, check the **rendered tiles in a browser**, not just the API response and marker layer. Some basemap providers require separate keys and show an "API KEY REQUIRED" watermark even when map requests return HTTP 200. Use a licensed provider under its current access/attribution/usage rules, or a truly keyless option suitable for the project's traffic. Do not expose secret server-side tokens in frontend code.
+- This is a release-blocking checklist, not an optional stylistic preference. Only publish or report a public link once these checks pass.
+
 ## Publish, then inspect production
 
 1. Build with the project's own command, or use the intended static folder. Publish through the existing dashboard, connected Cloudflare tools, or installed CLI. Dashboard drag-and-drop does not compile a `functions/` directory; use a supported method if the project needs Functions.
