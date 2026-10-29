@@ -1,0 +1,14 @@
+interface:
+  display_name: Cloudflare Publish & Search
+  short_description: Publish websites and verify Google Search Console
+  default_prompt: Use $publish-cloudflare-search-console to publish this site, verify
+    its public URLs, and connect Google Search Console.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -80,3 +80,12 @@ This is an instruction-based skill. It needs a capable agent with access to the 
 Documentation checked on October 16, 2026. Recheck provider guidance when running the skill; interfaces and limits can change.
 
 Personal open-source project by [tina1yan](https://github.com/tina1yan). Not affiliated with Cloudflare or Google. [MIT License](LICENSE).
+
+## ChatGPT personal Skill exports
+
+The existing root `SKILL.md` is preserved. These separately installable, reviewed personal Skills are also published here:
+
+- [Complete Browser Task](skills/complete-browser-task/SKILL.md) — safe completion and recovery of multi-step authorized website workflows. ([TinyFish reference](skills/complete-browser-task/references/tinyfish.md))
+- [Publish Cloudflare & Search Console](skills/publish-cloudflare-search-console/SKILL.md) — current ChatGPT Skill export, including the read-only [site checker](skills/publish-cloudflare-search-console/scripts/check_site.py).
+
+These Skills are instruction bundles, not pre-authenticated sessions. They grant no credentials, permissions, or automatic background execution.
